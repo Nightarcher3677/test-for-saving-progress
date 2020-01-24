@@ -1,4 +1,5 @@
 import time
+import os
 
 print('you see a codepad in front of you. next to it is a sign that says BRIDGE')
 while 1 == 1:
@@ -9,4 +10,16 @@ while 1 == 1:
     else:
         print('The screen flickers and displays: INCORRECT PASSWORD')
 
-print("you walk into the bridge, and see the control panel. it's still running, as if the occupants had suddenly disappeared.")
+print("you walk onto the bridge, and see the control panel. it's still running, as if the occupants had suddenly disappeared.")
+
+while 1 == 1:
+    choice = input('you can: look around, inpect control panel, poke chair \n\n')
+    if choice == 'poke chair':
+        print("wow, that's really soft")
+    elif choice == 'look around':
+        print('not much else to see')
+    elif choice == 'inspect control panel':
+        print('A radar function is still running, and shows a small dot moving towards you at approximately 760 km/h.')
+        break
+    else:
+        print('that is not an action')

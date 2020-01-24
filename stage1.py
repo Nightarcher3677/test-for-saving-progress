@@ -1,4 +1,5 @@
 import time
+import os
 
 print("You hear a voice crackle through a radio 'Is anyone there!? Hello?! Mayda-'")
 print("the radio cuts out and you see a brilliant starburst of yellow, white and orange.")

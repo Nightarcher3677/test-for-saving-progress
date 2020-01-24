@@ -20,3 +20,4 @@ if j == 'yes':
     print("you begin to feel nostalgic")
 
 print("the pirate says: you thought you'd seen the last of me, didn't you?! after all these years... well! now- 'wait.' you cut in 'it's been, like less than a minute. also, you got hit by an asteroid, remember?")
+print("the pirate thinks for a moment, and then says: 'oh well, it was fun while it lasted' then disappears before your eyes")

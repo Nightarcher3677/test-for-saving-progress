@@ -23,3 +23,22 @@ while 1 == 1:
         break
     else:
         print('that is not an action')
+print('you jam your finger on the home button that is displayed on the lower right corner, and activate the shields program. the ship approaches you.')
+print('(this can cause the story to diverge) the ship approaching you attempts to make contact.')
+choice = input('do you: accept the call [y], deny the call [n]')
+while 1 == 1:
+    choice = input('do you: accept the call [y], deny the call [n]')
+    if choice == 'poke chair':
+        print("you have accepted the call")
+        s = open('stage.txt', 'w')
+        s.write('branch1')
+        os.popen('branch1.py')
+        break
+    elif choice == 'inspect control panel':
+        print('you have denied the call')
+        s = open('stage.txt', 'w')
+        s.write('branch2')
+        os.popen('branch2.py')
+        break
+    else:
+        print('that is not an action')

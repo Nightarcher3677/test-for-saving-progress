@@ -1,6 +1,8 @@
 import time
 import os
 import random
+chair = 2
+save = 'yes'
 x = 1
 print('you see a codepad in front of you. next to it is a sign that says BRIDGE')
 while 1 == 1:
@@ -41,8 +43,14 @@ while 1 == 1:
         print('that is not an action')
 if accepted == True:
     print('A holographic screen appears before you, showing the face of a man who appeared to be in his early thirties \n, his left eye replaced with a shiny black lens that must have been the end of a camera')
+    print('the last words you hear are: coming here was a a mistake')
+    save = 'no'
+    s = open('enemy.txt', 'w')
+    s.write('yes')
 else:
     print('the ship, now in range of your vision, fires on you. Your shields are at 96%')
+    s = open('enemy.txt', 'w')
+    s.write('no')
 
     while x == 1:
         sh = 96
@@ -89,14 +97,17 @@ else:
                 choice = 'fire back'
         else:
             print('that is not an action')
-if chair == 1:
-    print('with the enemy ship gone, you can finally relax. you poke the chair, as if it would have somehow become hard. it is still soft')
+if save == 'no':
+    print('sucks for you')
 else:
-    print('with the enemy ship gone, you can finally relax.')
-
-s = open('stage.txt', 'w')
-s.write('stage3')
-s = open('stage.txt', 'r')
-read = s.read()
-hg = input('you can now safely press the X button without losing your progress \n\n')
-os.popen('stage3.py')
+    if chair == 1:
+        print('with the enemy ship gone, you can finally relax. you poke the chair, as if it would have somehow become hard. it is still soft')
+    else:
+        print('with the enemy ship gone, you can finally relax.')
+    s = open('stage.txt', 'w')
+    s.write('stage3')
+    s = open('stage.txt', 'r')
+    read = s.read()
+    print('you have completed stage two!! press ENTER to move on to the next stage')
+    hg = input('you can now safely press the X button without losing your progress \n\n')
+    os.popen('stage3.py')
